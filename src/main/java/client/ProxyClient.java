@@ -20,7 +20,7 @@ public class ProxyClient {
         try {
             // Creating and binding a socket to the local port 60001
             Socket socket = new Socket();
-            socket.bind(new InetSocketAddress(serverAddress, 60001)); // Bind to source port 60001
+            socket.bind(new InetSocketAddress("localhost", 60001)); // Bind to source port 60001
             socket.connect(new InetSocketAddress(serverAddress, serverPort));
 
             System.out.println("Successfully connected to the server at " + serverAddress + ":" + serverPort);
